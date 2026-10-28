@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMJ Digital Space - Multimedia Jurnalistik SMKN 1 Singosari</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Poppins & Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-brand">
+                <div class="logo-circle">MMJ</div>
+                <span>Digital Space</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#archive" class="nav-link">Memory Archive</a>
+                <a href="#newsroom" class="nav-link">Newsroom</a>
+                <a href="#members" class="nav-link">Members Hub</a>
+                <a href="#designs" class="nav-link">Design Showcase</a>
+                <a href="#feedback" class="nav-link">Kritik & Saran</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <span class="subtitle">Multimedia Jurnalistik · SMK Negeri 1 Singosari</span>
+                <h1>Setiap momen punya cerita.</h1>
+                <p class="tagline">CAPTURE THE MOMENT, PRESERVE THE STORY.</p>
+                <div class="hero-shortcuts">
+                    <a href="#archive" class="shortcut-card">
+                        <i data-lucide="image"></i>
+                        <h3>Memory Archive</h3>
+                        <p>Dokumentasi foto & video kegiatan sekolah</p>
+                    </a>
+                    <a href="#newsroom" class="shortcut-card">
+                        <i data-lucide="newspaper"></i>
+                        <h3>Newsroom</h3>
+                        <p>Berita, artikel, dan hasil liputan terbaru</p>
+                    </a>
+                    <a href="#members" class="shortcut-card">
+                        <i data-lucide="users"></i>
+                        <h3>Members Hub</h3>
+                        <p>Profil anggota, struktur, & divisi Humas</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEMORY ARCHIVE -->
+        <section id="archive" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Memory Archive</h2>
+                    <p>Arsip dokumentasi kegiatan dan event sekolah.</p>
+                </div>
+                <div class="filter-bar">
+                    <input type="text" id="archiveSearch" placeholder="Cari kegiatan...">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Semua</button>
+                        <button class="filter-btn" data-filter="upacara">Upacara</button>
+                        <button class="filter-btn" data-filter="lomba">Lomba</button>
+                        <button class="filter-btn" data-filter="seminar">Seminar</button>
+                    </div>
+                </div>
+                <div class="grid-container" id="archiveGrid">
+                    <!-- Dynamic Items -->
+                    <div class="card" data-category="upacara" onclick="openLightbox('https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80', 'Upacara Hari Senin', '12 Oktober 2026')">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80" alt="Upacara">
+                        <div class="card-body">
+                            <span class="badge">Upacara</span>
+                            <h3>Upacara Bendera Senin</h3>
+                            <p class="date">12 Oktober 2026</p>
+                        </div>
+                    </div>
+                    <div class="card" data-category="lomba" onclick="openLightbox('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80', 'Lomba HUT RI', '17 Agustus 2026')">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Lomba">
+                        <div class="card-body">
+                            <span class="badge">Lomba</span>
+                            <h3>Peringatan HUT RI ke-81</h3>
+                            <p class="date">17 Agustus 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSROOM -->
+        <section id="newsroom" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Newsroom</h2>
+                    <p>Portal berita dan informasi terkini dari lensa jurnalistik sekolah.</p>
+                </div>
+                <div class="grid-container" id="newsGrid">
+                    <article class="card news-card" onclick="openNewsDetail('Pameran Kreatif Multimedia 2026 Sukses Digelar', '10 Oktober 2026', 'Ahmad Rizki', 'Pameran karya akhir semester dari jurusan multimedia menampilkan berbagai inovasi digital kreatif berbasis kearifan lokal...')">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="News">
+                        <div class="card-body">
+                            <span class="badge">Liputan</span>
+                            <h3>Pameran Kreatif Multimedia 2026 Sukses Digelar</h3>
+                            <p class="news-meta">Oleh Ahmad Rizki · 10 Oktober 2026</p>
+                            <p class="excerpt">Pameran karya akhir semester dari jurusan multimedia menampilkan berbagai inovasi digital...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEMBERS HUB & HUMAS -->
+        <section id="members" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Members Hub</h2>
+                    <p>Pusat informasi anggota, struktur organisasi, dan divisi.</p>
+                </div>
+                <div class="hub-tabs">
+                    <button class="hub-btn active" onclick="switchHub('org')">Struktur Organisasi</button>
+                    <button class="hub-btn" onclick="switchHub('humas')">Divisi Humas</button>
+                </div>
+                
+                <div id="orgContent" class="hub-content active">
+                    <div class="grid-container">
+                        <div class="card profile-card">
+                            <div class="avatar">P</div>
+                            <h3>Farel Aditya</h3>
+                            <p class="role">Ketua MMJ</p>
+                        </div>
+                        <div class="card profile-card">
+                            <div class="avatar">S</div>
+                            <h3>Siti Aminah</h3>
+                            <p class="role">Wakil Ketua</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="humasContent" class="hub-content">
+                    <div class="humas-box">
+                        <h3>Divisi Hubungan Masyarakat (Humas)</h3>
+                        <p>Divisi Humas bertanggung jawab sebagai garda terdepan dalam membangun komunikasi, relasi publik, serta publikasi eksternal kegiatan Multimedia Jurnalistik.</p>
+                        <h4>Program Kerja Utama:</h4>
+                        <ul>
+                            <li>Pengelolaan Media Sosial & Relasi Publik</li>
+                            <li>Koordinasi Liputan Antar Instansi</li>
+                            <li>Pelayanan Informasi Publik MMJ</li>
+                        </ul>
+                        <div class="contact-info">
+                            <p><strong>Kontak Resmi:</strong> humas.mmj@smkn1singosari.sch.id</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIGN SHOWCASE -->
+        <section id="designs" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Design Showcase</h2>
+                    <p>Kumpulan karya poster, feeds, dan banner kreatif anggota MMJ.</p>
+                </div>
+                <div class="grid-container">
+                    <div class="card" onclick="openLightbox('https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=800&q=80', 'Poster Kampanye Adiwiyata', 'Karya Desain Grafis')">
+                        <img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=800&q=80" alt="Design">
+                        <div class="card-body">
+                            <span class="badge">Poster</span>
+                            <h3>Poster Kampanye Adiwiyata</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KRITIK & SARAN -->
+        <section id="feedback" class="section">
+            <div class="container feedback-container">
+                <div class="section-header">
+                    <h2>Kritik & Saran</h2>
+                    <p>Bantu kami menjadi lebih baik melalui masukan dan evaluasi Anda.</p>
+                </div>
+                <div class="feedback-card">
+                    <p>Sampaikan kritik, saran, atau evaluasi terkait program kerja dan konten MMJ Digital Space melalui formulir berikut:</p>
+                    <!-- Ganti tanda # dengan URL Google Forms atau Google Drive Anda -->
+                    <a href="https://forms.gle/placeholder" target="_blank" class="btn-primary">
+                        <i data-lucide="external-link"></i> Isi Google Form Kritik & Saran
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 MMJ Digital Space · SMK Negeri 1 Singosari. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
